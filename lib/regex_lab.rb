@@ -25,7 +25,9 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  text.split.grep(/^[A-Z]W\b/)
+  a = text.scan(/^[A-Z].\W$/m)
+  binding.pry
+  a
 end
 
 def valid_phone_number?(phone)
